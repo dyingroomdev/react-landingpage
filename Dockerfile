@@ -5,6 +5,7 @@ WORKDIR /app
 # Cache and Install dependencies
 COPY package.json .
 COPY yarn.lock .
+RUN yarn add --dev eslint
 RUN yarn install --production
 # Copy app files
 COPY . .
